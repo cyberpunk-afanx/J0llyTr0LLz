@@ -27,11 +27,23 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 
 ### INSTALL
 
-sudo apt install python3-pyqt5
-sudo apt install upx
-sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
-python3 -m pip install --upgrade pip
-pip install hashlib
-pip install zlib-state
-pip install python-magic
-pip install jsonlib
+1. sudo apt install python3-pyqt5
+2. sudo apt install upx
+3. sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+4. python3 -m pip install --upgrade pip
+5. pip install hashlib
+6. pip install zlib-state
+7. pip install python-magic
+8. pip install jsonlib
+
+### RECOMENDATION
+
+git clone repository to root directory (~/) and create alias at .zshrc (last line):
+
+`$ sudo nano .zshrc`
+
+This is at last line:
+
+`alias J0llyTr0LLz="python3 ~/J0llyTr0LLz/main.py"`
+
+CYBERPUNK AFANX
