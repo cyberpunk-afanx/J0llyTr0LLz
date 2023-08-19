@@ -39,15 +39,3 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 6. pip install zlib-state
 7. pip install python-magic
 8. pip install jsonlib
-
-### RECOMENDATION
-
-git clone repository to root directory (~/) and create alias at .zshrc (last line):
-
-`$ sudo nano .zshrc`
-
-This is at last line:
-
-`alias J0llyTr0LLz="python3 ~/J0llyTr0LLz/main.py"`
-
-CYBERPUNK AFANX
