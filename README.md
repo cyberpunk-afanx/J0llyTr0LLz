@@ -1,6 +1,10 @@
 # J0llyTr0LLz
 automation for primary binary analysis
 
+### REMEMBER
+
+INSTALL MODES___.TTF
+
 ### ABOUT
 
 J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT ONLY.
