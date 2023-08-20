@@ -19,6 +19,7 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 8.  Information about ELF
 9.  Protection types
 10. ROPGadgets and find gadgets
+11. strings
 
 ### J0llyTroLLz contains:
 
