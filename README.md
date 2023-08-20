@@ -29,6 +29,7 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 4. ROPGadget
 5. HEX-View
 6. Hashes
+7. strings
 
 ### INSTALL
 
