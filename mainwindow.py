@@ -156,9 +156,12 @@ class Ui_MainWindow(object):
         self.actionGrep.setObjectName("actionGrep")
         self.actionStrings = QtWidgets.QAction(MainWindow)
         self.actionStrings.setObjectName("actionStrings")
+        self.actionSeccomp_tools = QtWidgets.QAction(MainWindow)
+        self.actionSeccomp_tools.setObjectName("actionSeccomp_tools")
         self.menuFile.addAction(self.actionOpen)
         self.menuAbout.addAction(self.actionAbout)
         self.menuTools.addAction(self.actionStrings)
+        self.menuTools.addAction(self.actionSeccomp_tools)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuTools.menuAction())
         self.menubar.addAction(self.menuAbout.menuAction())
@@ -170,7 +173,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "J0llyTr0LLz"))
-        MainWindow.setStatusTip(_translate("MainWindow", "J0llyTr0LLz build 20082023 by AFANX"))
+        MainWindow.setStatusTip(_translate("MainWindow", "J0llyTr0LLz build 03092023 by AFANX"))
         self.lineEditDectorUPX.setPlaceholderText(_translate("MainWindow", "detector UPX"))
         self.filesize.setPlaceholderText(_translate("MainWindow", "file size"))
         self.filetype.setPlaceholderText(_translate("MainWindow", "file type"))
@@ -195,3 +198,5 @@ class Ui_MainWindow(object):
         self.actionGrep.setShortcut(_translate("MainWindow", "Return"))
         self.actionStrings.setText(_translate("MainWindow", "strings"))
         self.actionStrings.setShortcut(_translate("MainWindow", "Ctrl+S"))
+        self.actionSeccomp_tools.setText(_translate("MainWindow", "seccomp-tools"))
+        self.actionSeccomp_tools.setShortcut(_translate("MainWindow", "Ctrl+T"))

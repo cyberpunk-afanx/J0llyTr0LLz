@@ -3,7 +3,8 @@
 import sys
 import os
 from PyQt5 import QtWidgets, QtCore
-import mainwindow, about, strings
+from PyQt5.QtWidgets import QMessageBox
+import mainwindow, about, strings, seccomp
 import hashlib
 import zlib
 import magic
@@ -27,6 +28,7 @@ class JollyTrollz(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
         self.actionGrep.triggered.connect(self.grepGad)
         self.actionAbout.triggered.connect(self.about)
         self.actionStrings.triggered.connect(self.strings)
+        self.actionSeccomp_tools.triggered.connect(self.seccomp_func)
 
     def openFile(self):
         file = QtWidgets.QFileDialog.getOpenFileName()
@@ -275,7 +277,6 @@ class JollyTrollz(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
             self.openFile()
     
     def grepGad(self):
-
         if(len(self.grepGadget.text()) == 0):
             self.ropgadgets.clear()
             self.ropGadgets()
@@ -305,6 +306,21 @@ class JollyTrollz(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
             os.system("strings " + self.filename + " > tmp_strings.txt")
             self.strings = StringsApp()
             self.strings.show()
+    
+    def seccomp_func(self):
+        if(len(self.filename) != 0):
+            msgBox = QMessageBox()
+            msgBox.setIcon(QMessageBox.Information)
+            msgBox.setText("seccomp-tool wait action\n you have to check terminal and enter values")
+            msgBox.setWindowTitle("ATTENTION")
+            msgBox.setStandardButtons(QMessageBox.Ok)
+            returnValue = msgBox.exec()
+            if returnValue == QMessageBox.Ok:
+                print('[*] seccomp-tool wait action')
+            os.system("./$pwd/seccomp-tools/bin/seccomp-tools dump " + self.filename + " > seccomp_tmp.txt")
+            self.seccomp = SeccompApp()
+            self.seccomp.show()
+
 
 class AboutApp(QtWidgets.QWidget, about.Ui_Form):
     def __init__(self):
@@ -351,6 +367,24 @@ class StringsApp(QtWidgets.QWidget, strings.Ui_Form):
             for i in range(len(tmp_strings)):
                 self.listWidget.addItem(tmp_strings[i])
         
+class SeccompApp(QtWidgets.QWidget, seccomp.Ui_Form):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.seccomp_function()
+    
+    def seccomp_function(self):
+        all = []
+        with open("seccomp_tmp.txt", 'r') as tmp:
+            tmp_read = tmp.read()
+        os.system("rm seccomp_tmp.txt")
+        # self.listWidget.addItem("line ")
+        for i in range(len(tmp_read.split("\n"))):
+            if(tmp_read.split("\n")[i] == "================================="):
+                self.listWidget.addItem(" line  CODE  JT   JF      K")
+                for j in range(i+1, len(tmp_read.split("\n"))):
+                    self.listWidget.addItem(tmp_read.split("\n")[j])
+                break
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
