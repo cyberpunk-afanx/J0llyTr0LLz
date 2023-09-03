@@ -20,6 +20,7 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 9.  Protection types
 10. ROPGadgets and find gadgets
 11. strings
+12. seccomp-tool dump
 
 ### J0llyTroLLz contains:
 
@@ -30,14 +31,8 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 5. HEX-View
 6. Hashes
 7. strings
+8. seccomp-tool dump
 
 ### INSTALL
 
-1. sudo apt install python3-pyqt5
-2. sudo apt install upx
-3. sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
-4. python3 -m pip install --upgrade pip
-5. pip install hashlib
-6. pip install zlib-state
-7. pip install python-magic
-8. pip install jsonlib
+RUN setuptools.sh
