@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1395</width>
+    <height>812</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>ModeSeven</family>
+    <pointsize>11</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>J0llyTr0LLz</string>
+  </property>
+  <property name="statusTip">
+   <string>J0llyTr0LLz build 03092023 by AFANX</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 11pt &quot;ModeSeven&quot;;
+background-color: rgb(106, 9, 158);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="5" column="0" rowspan="2" colspan="3">
+     <widget class="QListWidget" name="ropgadgets">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;FreeMono&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QLineEdit" name="lineEditDectorUPX">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>detector UPX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3" colspan="2">
+     <widget class="QListWidget" name="checksec">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="filesize">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>file size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="filetype">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>file type</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="3">
+     <widget class="QLineEdit" name="countGatget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>find gadgets</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QTextEdit" name="textEditFromHex">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>DECODE FROM HEX...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QTextEdit" name="textEditHex">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>HEX...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="architecture">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>architecture</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="endianness">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>endianness</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QPushButton" name="killerUPX">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="text">
+       <string>KillUPX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QLineEdit" name="openedFile">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>opened file...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLineEdit" name="type">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>type</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QListWidget" name="listWidgetHashes">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3" colspan="2">
+     <widget class="QListWidget" name="listWidgetReadElf">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3" rowspan="2" colspan="2">
+     <widget class="QTextEdit" name="textEditFileAbout">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>about file</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="3">
+     <widget class="QLineEdit" name="grepGadget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(196, 112, 255);
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+      </property>
+      <property name="placeholderText">
+       <string>grep for gadgets...clear and press &lt;Enter&gt; for get all gadgets</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1395</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(23, 2, 35);
+selection-background-color: rgb(65, 5, 98);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionStrings"/>
+    <addaction name="actionSeccomp_tools"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionGrep">
+   <property name="text">
+    <string>grep</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="actionStrings">
+   <property name="text">
+    <string>strings</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSeccomp_tools">
+   <property name="text">
+    <string>seccomp-tools</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>grepGadget</sender>
+   <signal>returnPressed()</signal>
+   <receiver>actionGrep</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>335</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
