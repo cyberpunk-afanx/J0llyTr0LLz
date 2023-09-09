@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>983</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>JTDisasm</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 11pt &quot;ModeSeven&quot;;
+background-color: rgb(106, 9, 158);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QListWidget" name="listWidget">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;FreeMono&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+       </property>
+      </widget>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QTextEdit" name="hexTextEdit">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="fromHexTextEdit">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);
+background-color: rgb(179, 73, 255);</string>
+      </property>
+      <property name="title">
+       <string>config</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+         </property>
+         <property name="text">
+          <string>400000</string>
+         </property>
+         <property name="placeholderText">
+          <string>entry address</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QComboBox" name="comboBox">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+         </property>
+         <property name="placeholderText" stdset="0">
+          <string/>
+         </property>
+         <item>
+          <property name="text">
+           <string>ARCH_X86</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ARCH_ARM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ARCH_MIPS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ARCH_PPC</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="comboBox_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(196, 112, 255);
+font: 75 11pt &quot;ModeSeven&quot;;
+border-color: rgb(65, 5, 98);
+selection-color: rgb(65, 5, 98);</string>
+         </property>
+         <property name="placeholderText" stdset="0">
+          <string/>
+         </property>
+         <item>
+          <property name="text">
+           <string>MODE_64</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MODE_32</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MODE_ARM</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MODE_MIPS_64</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MODE_MIPS_32</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MODE_MIPS_32R6</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>983</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(23, 2, 35);
+selection-background-color: rgb(65, 5, 98);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuDisassembly">
+    <property name="title">
+     <string>Disassembly</string>
+    </property>
+    <addaction name="actionDisassembly"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDisassembly"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionDisassembly">
+   <property name="text">
+    <string>Disassembly</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
