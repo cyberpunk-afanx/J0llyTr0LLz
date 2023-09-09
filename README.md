@@ -21,6 +21,8 @@ J0llyTr0LLz shows a number of characteristics of the executable file, ELF FORMAT
 10. ROPGadgets and find gadgets
 11. strings
 12. seccomp-tool dump
+13. syscall table
+14. disasm
 
 ### J0llyTroLLz contains:
 
